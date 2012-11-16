@@ -4,7 +4,7 @@
 # under GPL v2
 
 # omit repeated lines, 
-# i.e. 'sort | uniq' or 'sort -u' without reording. 
+# i.e. 'sort | uniq' or 'sort -u' without reordering. 
 
 # I want to be unique,
 # not sort of unique.
