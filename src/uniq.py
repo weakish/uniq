@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.1
 
-# written by Jakukyo Friel <weakish@gmail.com>
-# under GPL v2
+# by Jang Rush <weakish@gmail.com>
+# under 0BSD
 
 # omit repeated lines, 
 # i.e. 'sort | uniq' or 'sort -u' without reordering. 

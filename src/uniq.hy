@@ -1,7 +1,7 @@
 #!/usr/bin/env hy
 
-; by Jakukyo Friel <weakish@gmail.com> (https://weakish.github.io)
-; under MIT
+; by Jang Rush <weakish@gmail.com>
+; under 0BSD
 
 ; Read lines from stdin and write to stdout without repeated lines.
 ; i.e. 'sort | uniq' or 'sort -u' without reordering.
