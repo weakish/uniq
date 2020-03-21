@@ -13,34 +13,12 @@
 
 
 import functools
+import sys
 
-def uniq(uniqlines, line):
-  '''
-  >>> uniq((), 1)
-  (1,)
-  >>> uniq((1,), 2)
-  (1, 2)
-  >>> uniq((1, 2), 2)
-  (1, 2)
-  '''
-  return uniqlines if line in uniqlines else uniqlines + (line,)
+uniq = lambda uniq_lines, line: uniq_lines if line in uniq_lines else uniq_lines + (line,)
 
-def uniq_lines(lines):
-  '''
-  >>> tuple(uniq_lines((3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3)))
-  (3, 1, 4, 5, 9, 2, 6, 8, 7)
-  '''
-  return functools.reduce(uniq, lines, ())
+uniq_lines = lambda lines: functools.reduce(uniq, lines, ())
 
-def unit_test():
-  import doctest
-  doctest.testmod()
+main = lambda: print('\n'.join(uniq_lines(sys.stdin.read().split('\n'))))
 
-
-def main():
-  import sys
-  unit_test()
-  print('\n'.join(uniq_lines(sys.stdin.read().split('\n'))))
-
-if __name__ == '__main__':
-  main()
+__name__ == '__main__' and main()
